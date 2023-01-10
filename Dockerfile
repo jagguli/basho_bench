@@ -1,7 +1,8 @@
 FROM erlang
 RUN apt-get update && apt-get install -y \
     cmake \
-    netcat
+    netcat \
+    r-cran-dplyr
 ADD . /srv/basho_bench
 WORKDIR /srv/basho_bench
 RUN git config --global url."https://".insteadOf git://
